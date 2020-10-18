@@ -1,0 +1,1 @@
+{"ast":null,"code":"import https from 'https';\nexport async function useFetch(path) {\n  if (!path) {\n    return null;\n  }\n\n  const agent = new https.Agent({\n    rejectUnauthorized: false\n  });\n  const response = await fetch(path, {\n    agent\n  });\n  const data = await response.json();\n  return {\n    data\n  };\n}","map":null,"metadata":{},"sourceType":"module"}
